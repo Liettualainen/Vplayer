@@ -29,7 +29,7 @@ checkStorage();
     }}
 function changeHandler() {
     if (LOCALSTORAGE_KEY) {
-        CloneformData = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY));
+              CloneformData = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY));
             for (let key in CloneformData) {
             formData[key] = CloneformData[key];
         }
@@ -51,7 +51,7 @@ function changeHandler() {
         return
     }
     else if (this.type === 'password') {
-        formData[this.name] = " ";
+        formData[this.name] = "";
          localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(formData));
         formData[this.name] = this.value;
         CurrentPassword = this.value;
@@ -69,7 +69,8 @@ function attachEvents() {
   formFields[i].addEventListener('change', throttle(changeHandler, 500))
     }
 }
-    function checkStorage() {
+
+function checkStorage() {
     const formFieldsSaved = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY));
     if (!formFieldsSaved) {
         EmptyObjectCreate();
@@ -80,8 +81,8 @@ function attachEvents() {
             console.log( formDataMassive)
        } for (let i = 0; i < formFields.length; ++i) {
     if (formFields[i].type !== 'submit') 
-                      formFields[i].value = formDataMassive[i];
-                  console.log( formFields)
+                formFields[i].value = formDataMassive[i];
+                console.log( formFields)
         }
 } attachEvents();
     }
