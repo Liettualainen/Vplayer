@@ -72,7 +72,7 @@ function changeHandler() {
 
         formData[this.name].files = imageFile;
         formData.password = "";
-        localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(formData));
+        // localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(formData));
         formData.password = CurrentPassword;
         console.log("formData", formData);
 
