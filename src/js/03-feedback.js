@@ -85,7 +85,7 @@ function changeHandler() {
 
 function attachEvents() {
            if (LOCALSTORAGE_KEY) {
-        CloneformData = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY));
+       let CloneformData = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY));
             for (let key in CloneformData) {
                 formData[key] = CloneformData[key];
                }
