@@ -1,0 +1,2 @@
+const e=document.querySelector(".form-add"),t=document.getElementById("selected");e.addEventListener("submit",(function(e){e.preventDefault();let l=this.elements["img-add"];if(l.files[0]){let e=new FileReader;e.readAsDataURL(l.files[0]),e.onload=function(e){localStorage.setItem("formimg",t.src=e.target.result)}}}));let l=localStorage.getItem("formimg");l&&(t.src=l,t.setAttribute("height","1000"),t.setAttribute("width","auto"));
+//# sourceMappingURL=05-Img_LocalStorage.7957e844.js.map

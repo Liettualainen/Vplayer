@@ -1,0 +1,2 @@
+!function(){var e="formimg",t=document.querySelector(".form-add"),r=document.getElementById("selected");t.addEventListener("submit",(function(t){t.preventDefault();var a=this.elements["img-add"];if(a.files[0]){var i=new FileReader;i.readAsDataURL(a.files[0]),i.onload=function(t){localStorage.setItem(e,r.src=t.target.result)}}}));var a=localStorage.getItem(e);a&&(r.src=a,r.setAttribute("height","1000"),r.setAttribute("width","auto"))}();
+//# sourceMappingURL=05-Img_LocalStorage.9eb694e6.js.map
