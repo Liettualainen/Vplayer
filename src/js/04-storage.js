@@ -47,6 +47,21 @@ function attachEvents() {
 }
 }
 
+function explorer(htmlElement) {
+   console.log( htmlElement);
+  let children = htmlElement.children;
+  // console.log("children", children);
+  if (children.length !== 0) {
+    for (const child of children) {
+      // console.log("inner position:", child);
+      explorer(child);
+    }
+  }
+
+}
+
+explorer(document.body);
+
 checkStorage();
 
 // console.log(formFields);
